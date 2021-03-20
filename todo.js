@@ -1,6 +1,5 @@
+// Ville Kurkela //
 // Muuttujat
-var inputArea = document.querySelector("#inputValue");
-var btn = document.querySelector("button");
 var btnReset = document.querySelector("#reset");
 var btnLast = document.querySelector("#removeLast");
 var ulArea = document.querySelector("ol");
@@ -16,12 +15,14 @@ function reset() {
 function lastItem() {
   ulArea.removeChild(ulArea.lastElementChild);
 }
-function myFunction() {
+function Funktio() {
   var item = document.getElementById("todoInput").value;
   if (item == "" || item.length < 3) {
     alert("Kirjoita jotakin tai liian lyhyt teksti.");
+    document.getElementById('todoInput').style.borderColor = "red";
   } else {
-    console.log("Toimii.")
+    document.getElementById('todoInput').style.borderColor = "green";
+    console.log("Toimii.");
     var text = document.createTextNode(item);
     var newItem = document.createElement("li");
     var crap = document.getElementById("todoList");
