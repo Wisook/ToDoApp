@@ -45,3 +45,5 @@ function Funktio() {
     }
   }
 }
+
+localStorage.setItem
