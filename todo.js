@@ -33,7 +33,6 @@ function Funktio() {
     newItem.appendChild(checkBox);
     newItem.appendChild(text);
     document.getElementById("todoInput").value = "";
-    checkBox.className = "addedClass";
   }
 
   function updateItem() {
