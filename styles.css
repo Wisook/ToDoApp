@@ -1,11 +1,11 @@
 
 body {
     background-image: url("https://www.teahub.io/photos/full/100-1003570_beautiful-landscape-4k-wallpaper-purple-nature-landscape-hd.jpg");
-    font-family: 'Aclonica';font-size: 22px;
     width: 100%;
     height: 100%;
     margin: 0;
     align-items: center;
+    font-family:Arial;
     }
     
     main {
@@ -16,18 +16,20 @@ body {
         max-width: 500px;
         margin: auto;
         padding: 10px;
+        background: blur(20px);
       }
     
       section {
-        margin-top: 25px;
+        margin-top: 15px;
         border: 2px solid #b3ccff;
-        padding: 10px;
+        padding: 5px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }
 
 header {
   border: 2px solid #b3ccff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: 'Aclonica';
 }
 
 ol {
@@ -43,34 +45,54 @@ li {
 }
 
 h1 {
-  background: linear-gradient(red, blue);
+  background-image: linear-gradient(to left top, #520064, #5a2c80, #614a9b, #6967b4, #7383cb, #6e97dd, #6aabec, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: white;
+  font-size: 50px;
 }
 
 h2 {
-  background: linear-gradient(red, blue);
+  background-image: linear-gradient(to left top, #520064, #5a2c80, #614a9b, #6967b4, #7383cb, #6e97dd, #6aabec, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: white;
+  font-size: 30px;
   }
 
-button {
-    cursor: pointer;
-    background-image: linear-gradient(to bottom, #00ff2c, #00ffdb, #00ffff, #c6fcff, #ffffff);
-    color: black;
-}
-
-#reset {
-  background-image: linear-gradient(to bottom, #ff0000, #ff517f, #ff97d2, #f8d1fc, #ffffff);
-  color: black;
-}
-
-#removeLast {
-  background-image: linear-gradient(to bottom, #ffbc00, #ffb283, #ffc4d8, #ffe5ff, #ffffff);
-  color: black;
-}
-
 h3 {
-  text-decoration: underline;
-  color: black;
+  background-image: linear-gradient(to left top, #520064, #5a2c80, #614a9b, #6967b4, #7383cb, #6e97dd, #6aabec, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  font-size: 30px;
+  text-decoration: underline;  
+}
+
+button {
+  cursor: pointer;
+  box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+  background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+  background-color:#79bbff;
+  border-radius:6px;
+  border:1px solid #84bbf3;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #528ecc;
+}
+button:hover {
+  background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+  background-color:#378de5;
+}
+button:active {
+  position:relative;
+  top:1px;
 }
