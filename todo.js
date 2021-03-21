@@ -1,4 +1,4 @@
-// Ville Kurkela //
+// Ville //
 // Muuttujat
 var btnReset = document.querySelector("#reset");
 var btnLast = document.querySelector("#removeLast");
