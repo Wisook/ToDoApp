@@ -23,6 +23,7 @@ function Funktio() {
     alert("Kirjoita jotakin tai liian lyhyt teksti.");
     document.getElementById('todoInput').style.borderColor = "red";
   } else {
+    localStorage.setItem('todoInput', ulArea.innerHTML); // Lisätään item localstorageen
     document.getElementById('todoInput').style.borderColor = "green";
     console.log("Toimii.");
     var text = document.createTextNode(item);
@@ -47,4 +48,10 @@ function Funktio() {
       this.parentNode.style.opacity = "1";
     }
   }
+}
+
+// Local storage määritykset
+var saved = localStorage.getItem('todoInput');
+if (saved) {
+	ulArea.innerHTML = saved;
 }
