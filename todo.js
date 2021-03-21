@@ -8,13 +8,15 @@ var ulArea = document.querySelector("ol");
 btnReset.addEventListener('click', reset);
 btnLast.addEventListener('click', lastItem);
 
-// Funktiot
+// Poisto nappuloiden toiminnot
 function reset() {
   ulArea.innerHTML = "";
 }
 function lastItem() {
   ulArea.removeChild(ulArea.lastElementChild);
 }
+
+// Lisää nappulan toiminnot
 function Funktio() {
   var item = document.getElementById("todoInput").value;
   if (item == ""  || item.length < 3) {
@@ -35,6 +37,7 @@ function Funktio() {
     document.getElementById("todoInput").value = "";
   }
 
+  // Checkboxin toiminnot
   function updateItem() {
     if (this.checked) {
       this.parentNode.style.textDecoration = "line-through";
