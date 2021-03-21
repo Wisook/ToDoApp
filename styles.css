@@ -43,24 +43,34 @@ li {
 }
 
 h1 {
-    background: #6A8BCF;
-  background: -webkit-linear-gradient(to left, #6A8BCF 18%, #1F44FF 50%, #4694CF 63%);
-  background: -moz-linear-gradient(to left, #6A8BCF 18%, #1F44FF 50%, #4694CF 63%);
-  background: linear-gradient(to left, #6A8BCF 18%, #1F44FF 50%, #4694CF 63%);
+  background: linear-gradient(red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-h3 {
-  background: #6A8BCF;
-  background: -webkit-linear-gradient(to left, #6A8BCF 18%, #1F44FF 50%, #4694CF 63%);
-  background: -moz-linear-gradient(to left, #6A8BCF 18%, #1F44FF 50%, #4694CF 63%);
-  background: linear-gradient(to left, #6A8BCF 18%, #1F44FF 50%, #4694CF 63%);
+h2 {
+  background: linear-gradient(red, blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   }
+
 button {
     cursor: pointer;
+    background-image: linear-gradient(to bottom, #00ff2c, #00ffdb, #00ffff, #c6fcff, #ffffff);
+    color: black;
 }
 
+#reset {
+  background-image: linear-gradient(to bottom, #ff0000, #ff517f, #ff97d2, #f8d1fc, #ffffff);
+  color: black;
+}
 
+#removeLast {
+  background-image: linear-gradient(to bottom, #ffbc00, #ffb283, #ffc4d8, #ffe5ff, #ffffff);
+  color: black;
+}
+
+h3 {
+  text-decoration: underline;
+  color: black;
+}
