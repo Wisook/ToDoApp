@@ -30,8 +30,8 @@ function Funktio() {
     var checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     checkBox.onclick = updateItem.bind(checkBox);
-    newItem.appendChild(checkBox);
     newItem.appendChild(text);
+    newItem.appendChild(checkBox);
     document.getElementById("todoInput").value = "";
   }
 

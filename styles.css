@@ -104,3 +104,8 @@
         #todoInput {
           height: 20px;
         }
+
+        input[type=checkbox] {
+          float: right;
+          
+      }
