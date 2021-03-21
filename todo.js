@@ -35,7 +35,8 @@ function Funktio() {
     checkBox.onclick = updateItem.bind(checkBox);
     newItem.appendChild(text);
     newItem.appendChild(checkBox);
-    document.getElementById("todoInput").value = "";
+ 
+  
   }
 
   // Checkboxin toiminnot
@@ -49,9 +50,11 @@ function Funktio() {
     }
   }
 }
-
-// Local storage määritykset
-var saved = localStorage.getItem('todoInput');
-if (saved) {
-	ulArea.innerHTML = saved;
+//
+function loadTodos() {
+  if (localStorage.todoInput) {
+    var Todos = localStorage.getItem("todoInput");
+    var list = document.getElementById('todoList');
+    list.innerHTML = Todos;
+  }
 }
