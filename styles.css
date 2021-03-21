@@ -20,6 +20,7 @@
         max-width: 500px;
         margin: auto;
         padding: 10px;
+        border-radius: 25px;
       }
     
       section {
@@ -27,28 +28,30 @@
         border: 2px solid #b3ccff;
         padding: 5px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
-
-      ol {
-         color:black;
-         border: 0,5px solid #b3ccff;
-         text-align: center;
+        border-radius: 25px;
       }
 
        li {
-         border: 1px solid #b3ccff;
+        border: 2px solid #b3ccff;
          font-family: 'Aclonica';
-         font-size: 22px;
+          font-size: 22px;
+          border-radius: 15px;
+          padding: 5px;
+          text-align: left;
+         color: rgb(0, 0, 0);
+         -webkit-text-stroke-width: 1px;
+         -webkit-text-stroke-color: rgb(107, 3, 167);
+
       }
 
       h1 {
         background-image: linear-gradient(to left top, #520064, #5a2c80, #614a9b, #6967b4, #7383cb, #6e97dd, #6aabec, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 0.1px;
+        -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(107, 3, 167);
         font-size: 40px;
-        font-family: 'Aclonica';
+        font-family: 'Open Sans Condensed', sans-serif;
 
       }
 
@@ -59,7 +62,7 @@
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(107, 3, 167);
         font-family: 'Aclonica';
-        font-size: 30px;
+        font-size: 25px;
        }
 
       h3 {
@@ -68,7 +71,7 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 0.1px;
         -webkit-text-stroke-color: rgb(107, 3, 167);
-        font-size: 30px;
+        font-size: 25px;
         text-decoration: underline;  
         font-family: 'Aclonica';
       }
