@@ -5,7 +5,13 @@
           height: 100%;
           margin: 0;
         }
-    
+    header {
+      text-align: center;
+      align-items: center;
+      max-width: 500px;
+      margin: auto;
+
+    }
     main {
         text-align: center;
         align-items: center;
@@ -31,7 +37,8 @@
 
        li {
          border: 1px solid #b3ccff;
-         font-family: 'Aclonica';font-size: 22px;
+         font-family: 'Aclonica';
+         font-size: 22px;
       }
 
       h1 {
@@ -41,10 +48,8 @@
         -webkit-text-stroke-width: 0.1px;
         -webkit-text-stroke-color: rgb(107, 3, 167);
         font-size: 40px;
-        border: 2px solid #b3ccff;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         font-family: 'Aclonica';
-        padding: 10px;
+
       }
 
       h2 {
@@ -53,6 +58,7 @@
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(107, 3, 167);
+        font-family: 'Aclonica';
         font-size: 30px;
        }
 
@@ -60,10 +66,11 @@
         background-image: linear-gradient(to left top, #520064, #5a2c80, #614a9b, #6967b4, #7383cb, #6e97dd, #6aabec, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-width: 0.1px;
         -webkit-text-stroke-color: rgb(107, 3, 167);
         font-size: 30px;
         text-decoration: underline;  
+        font-family: 'Aclonica';
       }
 
         button {
