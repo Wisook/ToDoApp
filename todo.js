@@ -17,7 +17,7 @@ function lastItem() {
 }
 function Funktio() {
   var item = document.getElementById("todoInput").value;
-  if (item == "" || item.length < 3) {
+  if (item == ""  || item.length < 3) {
     alert("Kirjoita jotakin tai liian lyhyt teksti.");
     document.getElementById('todoInput').style.borderColor = "red";
   } else {
