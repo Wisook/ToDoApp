@@ -38,8 +38,10 @@ function Funktio() {
   function updateItem() {
     if (this.checked) {
       this.parentNode.style.textDecoration = "line-through";
+      this.parentNode.style.opacity = "0.5";
     } else {
       this.parentNode.style.textDecoration = "none";
+      this.parentNode.style.opacity = "1";
     }
   }
 }
