@@ -35,10 +35,8 @@ function Funktio() {
     checkBox.onclick = updateItem.bind(checkBox);
     newItem.appendChild(text);
     newItem.appendChild(checkBox);
- 
-  
+    document.getElementById("todoInput").value = "";
   }
-
   // Checkboxin toiminnot
   function updateItem() {
     if (this.checked) {
@@ -50,7 +48,7 @@ function Funktio() {
     }
   }
 }
-//
+// Localstoragesta lataus
 function loadTodos() {
   if (localStorage.todoInput) {
     var Todos = localStorage.getItem("todoInput");
