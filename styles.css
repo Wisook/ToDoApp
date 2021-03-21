@@ -38,10 +38,10 @@
           border-radius: 15px;
           padding: 5px;
           text-align: left;
-         color: rgb(0, 0, 0);
-         -webkit-text-stroke-width: 1px;
-         -webkit-text-stroke-color: rgb(107, 3, 167);
-
+          color:rgb(1, 32, 61);
+          -webkit-text-stroke-width: 0.5px;
+          -webkit-text-stroke-color:#b3ccff;
+          margin-top: 5px;
       }
 
       h1 {
