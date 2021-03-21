@@ -45,5 +45,3 @@ function Funktio() {
     }
   }
 }
-
-localStorage.setItem
