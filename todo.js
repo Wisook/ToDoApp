@@ -1,5 +1,5 @@
 // Ville //
-// Muuttujat
+// Haetaan elementit
 var btnReset = document.querySelector("#reset");
 var btnLast = document.querySelector("#removeLast");
 var ulArea = document.querySelector("ol");
@@ -8,7 +8,7 @@ var ulArea = document.querySelector("ol");
 btnReset.addEventListener('click', reset);
 btnLast.addEventListener('click', lastItem);
 
-// Lisää nappulan toiminnot
+// Lisää nappulan toiminnot ja lista
 function Funktio() {
   var item = document.getElementById("todoInput").value;
   if (item == ""  || item.length < 3) {
@@ -26,12 +26,12 @@ function Funktio() {
     checkBox.onclick = updateItem.bind(checkBox);
     newItem.appendChild(text);
     newItem.appendChild(checkBox);
-    localStorage.setItem('todoInput', ulArea.innerHTML); // Lisätään item localstorageen
+    localStorage.setItem('todoInput', ulArea.innerHTML);
     document.getElementById("todoInput").value = "";
     
   }
 }
-    // Checkboxin toiminnot
+    // Checkboxin toiminnot + style
     function updateItem() {
       if (this.checked) {
         this.parentNode.style.textDecoration = "line-through";
@@ -42,29 +42,25 @@ function Funktio() {
         this.parentNode.style.opacity = "1";
         this.removeAttribute("checked");
       }
-  
       localStorage.setItem('todoInput', ulArea.innerHTML);
     }
-// Localstoragesta lataus
+// Localstoragesta input ja checkbox
 function loadTodos() {
   var Todos = localStorage.getItem("todoInput");
-
   if (Todos != null) {
     var list = document.getElementById('todoList');
     list.innerHTML = Todos;
-
     var inputs = list.querySelectorAll("input[type=checkbox]");
-
-    for(let index = 0; index < inputs.length; index++) {
-      inputs[index].onclick = updateItem.bind(inputs[index]);
-      
+    for(var i = 0; i < inputs.length; i++) {
+      inputs[i].onclick = updateItem.bind(inputs[i]);
     }
   }
 }
-// Poisto nappuloiden toiminnot
+// Poista nappien toiminnot
 function reset() {
   ulArea.innerHTML = "";
 }
 function lastItem() {
   ulArea.removeChild(ulArea.lastElementChild);
+  localStorage.setItem('todoInput', ulArea.innerHTML);
 }
