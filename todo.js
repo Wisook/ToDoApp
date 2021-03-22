@@ -31,42 +31,40 @@ function Funktio() {
     
   }
 }
-  // Checkboxin toiminnot
-  function updateItem() {
-    if (this.checked) {
-      this.parentNode.style.textDecoration = "line-through";
-      this.parentNode.style.opacity = "0.5";
-    } else {
-      this.parentNode.style.textDecoration = "none";
-      this.parentNode.style.opacity = "1";
+    // Checkboxin toiminnot
+    function updateItem() {
+      if (this.checked) {
+        this.parentNode.style.textDecoration = "line-through";
+        this.parentNode.style.opacity = "0.5";
+        this.setAttribute("checked", this.checked);
+      } else {
+        this.parentNode.style.textDecoration = "none";
+        this.parentNode.style.opacity = "1";
+        this.removeAttribute("checked");
+      }
+  
+      localStorage.setItem('todoInput', ulArea.innerHTML);
+    }
+// Localstoragesta lataus
+function loadTodos() {
+  var Todos = localStorage.getItem("todoInput");
+
+  if (Todos != null) {
+    var list = document.getElementById('todoList');
+    list.innerHTML = Todos;
+
+    var inputs = list.querySelectorAll("input[type=checkbox]");
+
+    for(let index = 0; index < inputs.length; index++) {
+      inputs[index].onclick = updateItem.bind(inputs[index]);
+      
     }
   }
+}
 // Poisto nappuloiden toiminnot
 function reset() {
   ulArea.innerHTML = "";
 }
 function lastItem() {
   ulArea.removeChild(ulArea.lastElementChild);
-}
-
-const inputs = document.getElementsByTagName("input");
-
-for(let input = 0; input < inputs.length; input++) {
-    inputs[input].addEventListener("change", (event) => {
-        if(event.target.type == "checkbox")
-            localStorage.setItem(event.target.id, event.target.checked);
-        else
-            localStorage.setItem(event.target.id, event.target.value);
-    });
-    
-    const value = localStorage.getItem(inputs[input].id);
-
-    if(value != null) {
-        if(inputs[input].type == "checkbox") {
-            if(value == "true")
-                inputs[input].checked = true;
-        }
-        else
-            inputs[input].value = value;
-    }
 }
