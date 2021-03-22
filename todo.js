@@ -8,14 +8,6 @@ var ulArea = document.querySelector("ol");
 btnReset.addEventListener('click', reset);
 btnLast.addEventListener('click', lastItem);
 
-// Poisto nappuloiden toiminnot
-function reset() {
-  ulArea.innerHTML = "";
-}
-function lastItem() {
-  ulArea.removeChild(ulArea.lastElementChild);
-}
-
 // Lisää nappulan toiminnot
 function Funktio() {
   var item = document.getElementById("todoInput").value;
@@ -23,7 +15,6 @@ function Funktio() {
     alert("Kirjoita jotakin tai liian lyhyt teksti.");
     document.getElementById('todoInput').style.borderColor = "red";
   } else {
-    localStorage.setItem('todoInput', ulArea.innerHTML); // Lisätään item localstorageen
     document.getElementById('todoInput').style.borderColor = "green";
     console.log("Toimii.");
     var text = document.createTextNode(item);
@@ -35,8 +26,11 @@ function Funktio() {
     checkBox.onclick = updateItem.bind(checkBox);
     newItem.appendChild(text);
     newItem.appendChild(checkBox);
+    localStorage.setItem('todoInput', ulArea.innerHTML); // Lisätään item localstorageen
     document.getElementById("todoInput").value = "";
+    
   }
+}
   // Checkboxin toiminnot
   function updateItem() {
     if (this.checked) {
@@ -47,7 +41,6 @@ function Funktio() {
       this.parentNode.style.opacity = "1";
     }
   }
-}
 // Localstoragesta lataus
 function loadTodos() {
   if (localStorage.todoInput) {
@@ -56,3 +49,12 @@ function loadTodos() {
     list.innerHTML = Todos;
   }
 }
+// Poisto nappuloiden toiminnot
+function reset() {
+  ulArea.innerHTML = "";
+}
+function lastItem() {
+  ulArea.removeChild(ulArea.lastElementChild);
+}
+
+
