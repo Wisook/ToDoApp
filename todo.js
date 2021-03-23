@@ -15,7 +15,7 @@ function Funktio() { //
   var item = document.getElementById("todoInput").value;
   if (item == ""  || item.length < 3) { 
     alert("Kirjoitit liian vähän."); 
-    console.log("Liian lyhyt teksti.") 
+    console.log("Liian lyhyt teksti.");
     document.getElementById('todoInput').style.borderColor = "red"; 
   } else { 
     document.getElementById('todoInput').style.borderColor = "green"; 
