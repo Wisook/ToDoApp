@@ -3,7 +3,6 @@
 var btnReset = document.querySelector("#reset");
 var btnLast = document.querySelector("#removeLast");
 var ulArea = document.querySelector("ol");
-
 // Kuuntelijat
 btnReset.addEventListener('click', reset);
 btnLast.addEventListener('click', lastItem);
@@ -12,11 +11,12 @@ btnLast.addEventListener('click', lastItem);
 function Funktio() {
   var item = document.getElementById("todoInput").value;
   if (item == ""  || item.length < 3) {
-    alert("Kirjoita jotakin tai liian lyhyt teksti.");
+    alert("Kirjoitit liian vähän.");
+    console.log("Liian lyhyt teksti.")
     document.getElementById('todoInput').style.borderColor = "red";
   } else {
     document.getElementById('todoInput').style.borderColor = "green";
-    console.log("Toimii.");
+    console.log("Ok. Lisätty listaan.");
     var text = document.createTextNode(item);
     var newItem = document.createElement("li");
     var crap = document.getElementById("todoList");
@@ -44,7 +44,7 @@ function Funktio() {
       }
       localStorage.setItem('todoInput', ulArea.innerHTML);
     }
-// Localstoragesta input ja checkbox
+// Ladataan localStoragesta 
 function loadTodos() {
   var Todos = localStorage.getItem("todoInput");
   if (Todos != null) {
