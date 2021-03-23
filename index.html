@@ -18,8 +18,10 @@
     <main>
       <section>
           <h2>Lisää ostoksia listaan</h2> <!-- Tekstinsyöttökentän otsikko -->
+          <form name="myForm" id="todoForm"> <!-- Formilla toimii Enter nappi syöttäessä tekstiä kenttään, ilman js määrittelyjä -->
       <input id="todoInput" name="name" autocomplete="off" required> <!-- Tekstinsyöttökenttä, autocomplete poistaa automaattiset lomaketiedot ja required validointi -->
       <button id="button" onclick="Funktio(); return false;" >Lisää</button> <!-- Lisää nappi, onclick funktio + false ei lataa sivua uusiksi -->
+      </form>
       </section>
       <h3>Kauppalista:</h3> <!-- listan otsikko -->
       <ol id="todoList"> <!-- lista -->
