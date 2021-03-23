@@ -67,7 +67,6 @@ function reset() {
     ulArea.innerHTML = "";
   } else {
     false;
-    
   }
  localStorage.setItem('todoInput', ulArea.innerHTML);
 }
