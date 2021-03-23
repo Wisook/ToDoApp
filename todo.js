@@ -61,7 +61,15 @@ function loadTodos() {
 }
 // Poista nappien toiminnot
 function reset() {
-  ulArea.innerHTML = "";
+  localStorage.setItem('todoInput', ulArea.innerHTML);
+  if (confirm('Oletko varma?')) {
+    true;
+    ulArea.innerHTML = "";
+  } else {
+    false;
+    localStorage.setItem('todoInput', ulArea.innerHTML);
+  }
+ 
 }
 function lastItem() {
   ulArea.removeChild(ulArea.lastElementChild);
