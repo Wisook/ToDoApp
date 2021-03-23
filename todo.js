@@ -67,9 +67,9 @@ function reset() {
     ulArea.innerHTML = "";
   } else {
     false;
-    localStorage.setItem('todoInput', ulArea.innerHTML);
+    
   }
- 
+ localStorage.setItem('todoInput', ulArea.innerHTML);
 }
 function lastItem() {
   ulArea.removeChild(ulArea.lastElementChild);
