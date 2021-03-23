@@ -1,21 +1,24 @@
-// Ville //
+// TO00BL10-3011 Web sovellusten kehittäminen javascriptillä //
+// Javascript tiedosto //
+
 // Haetaan elementit
 var btnReset = document.querySelector("#reset");
 var btnLast = document.querySelector("#removeLast");
 var ulArea = document.querySelector("ol");
+
 // Kuuntelijat
 btnReset.addEventListener('click', reset);
 btnLast.addEventListener('click', lastItem);
 
-// Lisää nappulan toiminnot ja lista
-function Funktio() {
+// Lisää nappulan toiminnot, listan luonti ja tallennus local storageen. 
+function Funktio() { //
   var item = document.getElementById("todoInput").value;
-  if (item == ""  || item.length < 3) {
-    alert("Kirjoitit liian vähän.");
-    console.log("Liian lyhyt teksti.")
-    document.getElementById('todoInput').style.borderColor = "red";
-  } else {
-    document.getElementById('todoInput').style.borderColor = "green";
+  if (item == ""  || item.length < 3) { 
+    alert("Kirjoitit liian vähän."); 
+    console.log("Liian lyhyt teksti.") 
+    document.getElementById('todoInput').style.borderColor = "red"; 
+  } else { 
+    document.getElementById('todoInput').style.borderColor = "green"; 
     console.log("Ok. Lisätty listaan.");
     var text = document.createTextNode(item);
     var newItem = document.createElement("li");
@@ -31,7 +34,7 @@ function Funktio() {
     
   }
 }
-    // Checkboxin toiminnot + style
+    // Checkboxin toiminnot + tyylimäärittelyjä
     function updateItem() {
       if (this.checked) {
         this.parentNode.style.textDecoration = "line-through";
